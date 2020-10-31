@@ -2,8 +2,7 @@
 #include<algorithm>
 #include<math.h>
 
-Solver::Solver(Field2D* F, float e1, float e2) : m_res(e1), m_mdot_res(e2), m_row(F->m_row), 
-												 m_col(F->m_col), f(F), dx(F->m_dx), dy(F->m_dy)
+Solver::Solver(Field2D* F, float e1, float e2) : m_res(e1), m_mdot_res(e2), m_row(F->m_row), m_col(F->m_col), f(F), dx(F->m_dx), dy(F->m_dy)
 {
 	iteration		= 0;						// Set Iteration number
 	m_error			= 1;
@@ -37,8 +36,8 @@ void Solver::solverInit()
 	m_qy		= new float[m_row * m_col];
 	m_Rex		= new float[m_row * m_col];
 	m_Rey		= new float[m_row * m_col];
-	a			= new float[m_row * m_col];
-	vp			= new float[m_row * m_col];
+	a		= new float[m_row * m_col];
+	vp		= new float[m_row * m_col];
 	vp_mod		= new float[m_row * m_col];
 	dt_CFL		= new float[m_row * m_col];
 	m_U1P		= new float[m_row * m_col];
@@ -674,15 +673,6 @@ void Solver::vectorSetE()
 	{
 		for (int j = 0; j < m_row; j++)
 		{
-			/*m_E1[index(i, j)] = f->m_rho[index(i, j)] * f->m_u[index(i, j)];
-			m_E2[index(i, j)] = f->m_rho[index(i, j)] * f->m_u[index(i, j)] * f->m_u[index(i, j)]
-				+ f->m_p[index(i, j)] - m_txx[index(i, j)];
-			m_E3[index(i, j)] = f->m_rho[index(i, j)] * f->m_u[index(i, j)] * f->m_v[index(i, j)]
-				- m_txy[index(i, j)];
-			m_E5[index(i, j)] = (f->m_Et[index(i, j)] + f->m_p[index(i, j)]) * f->m_u[index(i, j)]
-				- f->m_u[index(i, j)] * m_txx[index(i, j)]
-				- f->m_v[index(i, j)] * m_txy[index(i, j)] + m_qx[index(i, j)];*/
-
 			m_E1[index(i, j)] = m_U2[index(i, j)];
 			m_E2[index(i, j)] = m_U2[index(i, j)] * (m_U2[index(i, j)] / m_U1[index(i, j)])
 				+ ((m_U5[index(i, j)] / m_U1[index(i, j)]) - (pow((m_U2[index(i, j)] / m_U1[index(i, j)]), 2) + pow((m_U3[index(i, j)] / m_U1[index(i, j)]), 2)) / 2) / (f->m_cv) * m_U1[index(i, j)] * 287
