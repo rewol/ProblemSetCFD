@@ -1,7 +1,7 @@
 /****************************************************/
-/* Generates a flow square flow field.				*/
-/* u, v, p, T, rho, e, Et as primitive properties	*/
-/* mu and k as thermophysical properties			*/		
+/* Generates a flow square flow field.		    */
+/* u, v, p, T, rho, e, Et as primitive properties   */
+/* mu and k as thermophysical properties	    */		
 /****************************************************/
 
 #pragma once
@@ -58,7 +58,7 @@ public:
 	float* m_V		= nullptr;
 	float* m_T		= nullptr;
 	float* m_p		= nullptr;
-	float* m_rho	= nullptr;
+	float* m_rho	        = nullptr;
 	float* m_e		= nullptr;
 	float* m_Et		= nullptr;
 	float* m_mu		= nullptr;
