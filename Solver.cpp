@@ -6,7 +6,7 @@ Solver::Solver(Field2D* F, float e1, float e2) : m_res(e1), m_mdot_res(e2), m_ro
 {
 	iteration		= 0;						// Set Iteration number
 	m_error			= 1;
-	m_mdot_error	= 1;	
+	m_mdot_error		= 1;	
 	solverInit();								// Initialize solution field
 }
 
