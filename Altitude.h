@@ -23,9 +23,9 @@ private:
 	float m_vis;
 	const float m_rhoSeaLevel		= 1.225f;		// In kg/m3
 	const float m_tSeaLevel			= 288.16f;		// In Kelvin
-	const float R					= 287.0f;		// J/(kg.K)
-	const float m_visSeaLevel		= 1.7894e-5f;	// kg/(m.s)
-	const float m_pSeaLevel			= 101301.0f;	// N/m2
+	const float R				= 287.0f;		// J/(kg.K)
+	const float m_visSeaLevel		= 1.7894e-5f;	        // kg/(m.s)
+	const float m_pSeaLevel			= 101301.0f;	        // N/m2
 
 };
 
