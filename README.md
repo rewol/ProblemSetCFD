@@ -16,7 +16,7 @@ Make sure to edit boundary conditions and vector calculations.
 3. MACCORMACK method is explicit so timestep calculation is limited with CFL stability criteria.
 4. u, v, rho, T and p are extracted to text files in a format that is required by gnuplot contour plot.
 5. Other types of plots can be extracted from the solution field as you see fit.
-6. There is no massflow check at the inlet and outlet. It should be implemented.
+6. There is no massflow check at the inlet and outlet. It should definetely be implemented.
 7. It is definetely possible to optimize the code by performing highlevel move / copy techniques. In my computer it took 417 seconds to converge for a 121 by 121 grid.
 After 121 nodes, solution becomes unstable and "explode". So for grid independence for this particular problem in the book, a more detail look into time step function is in order.
 
