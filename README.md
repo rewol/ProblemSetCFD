@@ -10,7 +10,7 @@ Solver class creates a solution field with Vector U, E and F.
 
 Place the .h and .cpp files in the same directory as main.cpp and run the code.
 
-1. Only MACCORMACK' s method is implemented into the code.
+1. Only MACCORMACK' s method is implemented in the code.
 2. Only constant temperature on the wall is implemented. It'd be a nice challenge to implement adiabatic wall.
 Make sure to edit boundary conditions and vector calculations.
 3. MACCORMACK method is explicit so timestep calculation is limited with CFL stability criteria.
