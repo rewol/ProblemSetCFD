@@ -2,7 +2,7 @@ REVISION DATE: 31.10.2020
 Computational Fluid Dynamics Basics with Applications by John D. Anderson
 Chapter 10 Problem
 Supersonic flow over a flat plate.
-Refer to the book mor the methodology.
+Refer to the book for the methodology.
 
 Altitude class calculates freestream values up to 6000m
 Field2d class creates a flow field and sets dx, dy using the input arguments.
